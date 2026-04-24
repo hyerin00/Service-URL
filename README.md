@@ -12,3 +12,10 @@
     링크
   </a>
 </li>
+
+<li>
+  web
+  <a href="https://hyerin00.github.io/Service-URL/demo.html" target="_blank">
+    링크
+  </a>
+</li>
