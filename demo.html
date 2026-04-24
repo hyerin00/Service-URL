@@ -23,15 +23,6 @@
       padding: 24px;
       margin-bottom: 20px;
     }
-    button {
-      background: #ff2d55;
-      color: white;
-      border: 0;
-      border-radius: 10px;
-      padding: 12px 18px;
-      font-size: 16px;
-      cursor: pointer;
-    }
     input {
       width: 100%;
       padding: 14px;
@@ -40,6 +31,16 @@
       background: #111;
       color: white;
       font-size: 16px;
+      margin-top: 10px;
+    }
+    button {
+      background: #ff2d55;
+      color: white;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 16px;
+      cursor: pointer;
       margin-top: 10px;
     }
     .video {
@@ -67,53 +68,43 @@
   <div class="wrap">
     <h1>TikTok Trend Dashboard Demo</h1>
     <p class="desc">
-      This demo shows how TikTok content information can be displayed as text-based references with links to original TikTok content.
+      This demo shows how keyword-based TikTok content references are displayed with links to original TikTok videos.
     </p>
 
     <div class="card">
-      <h2>1. Connect TikTok Account</h2>
-      <p class="desc">Users can connect their TikTok account to view public content information.</p>
-      <button onclick="connectTikTok()">Login with TikTok</button>
-      <p id="loginStatus" class="tag"></p>
-    </div>
-
-    <div class="card">
-      <h2>2. Search Keyword</h2>
-      <p class="desc">Enter a keyword to view related TikTok content references.</p>
+      <h2>1. Search Keyword</h2>
+      <p class="desc">Enter a keyword to explore TikTok-related content references.</p>
       <input id="keyword" value="iphone" />
-      <br /><br />
       <button onclick="showResults()">Analyze Trend</button>
     </div>
 
     <div class="card" id="results" style="display:none;">
-      <h2>3. TikTok Content References</h2>
-      <p class="desc">Showing video title, description, and link to the original TikTok content.</p>
+      <h2>2. TikTok Content References</h2>
+      <p class="desc">
+        Showing video titles, descriptions, and links to the original TikTok content.
+      </p>
 
       <div class="video" onclick="openTikTok('https://www.tiktok.com/@tiktok/video/7320000000000000000')">
         <h3>iPhone 17 design concept is trending</h3>
-        <p class="desc">Users are discussing expected design changes and new camera features.</p>
-        <p class="tag">Open original TikTok content</p>
+        <p class="desc">Users discuss expected design changes and camera features.</p>
+        <p class="tag">Open original TikTok video</p>
       </div>
 
       <div class="video" onclick="openTikTok('https://www.tiktok.com/@tiktok/video/7320000000000000001')">
         <h3>New iPhone color reactions</h3>
-        <p class="desc">Short-form videos mention popular colors and user reactions.</p>
-        <p class="tag">Open original TikTok content</p>
+        <p class="desc">Short videos highlight popular colors and user opinions.</p>
+        <p class="tag">Open original TikTok video</p>
       </div>
 
       <div class="video" onclick="openTikTok('https://www.tiktok.com/@tiktok/video/7320000000000000002')">
         <h3>iPhone camera comparison clips</h3>
-        <p class="desc">Creators compare camera quality and highlight key features.</p>
-        <p class="tag">Open original TikTok content</p>
+        <p class="desc">Creators compare camera performance and features.</p>
+        <p class="tag">Open original TikTok video</p>
       </div>
     </div>
   </div>
 
   <script>
-    function connectTikTok() {
-      document.getElementById("loginStatus").innerText = "TikTok account connected successfully.";
-    }
-
     function showResults() {
       document.getElementById("results").style.display = "block";
     }
