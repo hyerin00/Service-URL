@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trend API Dashboard</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#0f0f0f; color:#fff; }
+    header { padding:64px 24px; text-align:center; background:#151515; }
+    h1 { font-size:42px; margin-bottom:16px; }
+    p { color:#bbb; line-height:1.7; }
+    .wrap { max-width:1000px; margin:0 auto; padding:40px 24px; }
+    .card { background:#181818; border:1px solid #333; border-radius:18px; padding:24px; margin-bottom:20px; }
+    input { width:100%; padding:14px; border-radius:10px; border:1px solid #444; background:#111; color:#fff; font-size:16px; }
+    button { margin-top:12px; background:#ff2d55; color:#fff; border:0; border-radius:10px; padding:12px 18px; font-size:16px; cursor:pointer; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+    .item { background:#111; border:1px solid #333; border-radius:14px; padding:18px; }
+    .link { color:#ff2d55; cursor:pointer; font-weight:bold; }
+    footer { text-align:center; padding:30px; color:#888; }
+    a { color:#ff2d55; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trend API Dashboard</h1>
+    <p>
+      A web-based dashboard that provides limited public content reference information
+      for trend monitoring and analysis.
+    </p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Keyword Trend Analysis</h2>
+      <p>
+        Users can enter a keyword and view summarized content references such as
+        video titles, descriptions, and links to original TikTok content.
+      </p>
+      <input id="keyword" value="iphone" />
+      <button onclick="showResults()">Start Analysis</button>
+    </section>
+
+    <section class="card" id="results" style="display:none;">
+      <h2>TikTok Content References</h2>
+      <p>
+        This section displays limited public information for reference purposes only.
+        Original content opens directly on TikTok.
+      </p>
+
+      <div class="grid">
+        <div class="item">
+          <h3>iPhone design concept is trending</h3>
+          <p>Users discuss expected design changes and camera features.</p>
+          <p class="link" onclick="openTikTok()">Open original TikTok content</p>
+        </div>
+
+        <div class="item">
+          <h3>New iPhone color reactions</h3>
+          <p>Short-form videos highlight user opinions and product reactions.</p>
+          <p class="link" onclick="openTikTok()">Open original TikTok content</p>
+        </div>
+
+        <div class="item">
+          <h3>Camera comparison clips</h3>
+          <p>Creators compare camera quality and key feature differences.</p>
+          <p class="link" onclick="openTikTok()">Open original TikTok content</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Service Information</h2>
+      <p>
+        This service does not store or redistribute video files. It only displays
+        limited text-based information and links for content reference and analysis.
+      </p>
+      <p>
+        <a href="./privacy.html">Privacy Policy</a> |
+        <a href="./terms.html">Terms of Service</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Contact: hr.lee@weballin.com
+  </footer>
+
+  <script>
+    function showResults() {
+      document.getElementById("results").style.display = "block";
+    }
+
+    function openTikTok() {
+      window.open("https://www.tiktok.com/", "_blank");
+    }
+  </script>
+</body>
+</html>
